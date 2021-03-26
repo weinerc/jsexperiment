@@ -127,10 +127,26 @@ document.body.style.color = 'grey'
           "type": "text",
           "title": "Voluntary Consent",
           "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject. In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities. You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence. You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue. This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \n\nThe University of Manitoba may look at your research records to see that the research is being done in a safe and proper way.\nThis research has been approved by the Research Ethics Board 1 (REB1) at the University of Manitoba. If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca). \n\nPlease click on the \"I Consent\" button below to indicate that you wish to proceed with the experiment. \n\nPlease press the \"Esc\" key and exit your browser if you do not wish to proceed with the experiment. \n\nThank you. "
+        },
+        {
+          "required": true,
+          "type": "radio",
+          "label": "Do you understand and consent to these terms? ",
+          "options": [
+            {
+              "label": "I Consent",
+              "coding": "1"
+            },
+            {
+              "label": "I Do Not Consent",
+              "coding": "2"
+            }
+          ],
+          "name": "Participant_Consent"
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "I Consent ",
+      "submitButtonText": "Continue ",
       "submitButtonPosition": "right",
       "files": {},
       "responses": {
@@ -139,6 +155,87 @@ document.body.style.color = 'grey'
       "parameters": {},
       "messageHandlers": {},
       "title": "Consent Form"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "content": "Click don't consent gets to Firebase"
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\r\n\r\n\u003Cbutton id=\"Submit\"\u003EContinue to Debriefing Form\u003C\u002Fbutton\u003E\r\n",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* Download data to firebase */
+this.options.events['click button#Submit'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
+  
+  firebase.database().ref(rng.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
+
+/* Continue to next screen */
+this.end()
+}
+
+}
+      },
+      "title": "Page",
+      "skip": "${this.state['Participant_Consent'] == '1'}",
+      "tardy": true
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "",
+          "content": "click esc to exit "
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Debriefing Form (No Consent) ",
+      "tardy": true,
+      "skip": "${this.state['Participant_Consent'] == '1'}"
+    },
+    {
+      "type": "lab.html.Form",
+      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003E Clicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once the new window opens, please minimize it and continue the experiment.  You may return to the new window following completion of the experiment. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    Some browsers use pop-up blockers which may prevent the new window from opening.  If for some reason the new window does not open, and you do not receive credit for your participation in this study, please email langrirw@myumanitoba.ca AFTER COMPLETING THE EXPERIMENT.  \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fdefault.aspx?p_return_experiment_id=1317&credit_token=ea11add557884894bfa2af16c2a640c8&survey_code=${this.state.url.id}'\n,'','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n",
+      "scrollTop": true,
+      "files": {},
+      "responses": {
+        "click button#Continue": "Credit"
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Form",
+      "tardy": true
     },
     {
       "type": "lab.html.Page",
@@ -801,6 +898,7 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
+        "plugins": [],
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -1289,6 +1387,34 @@ this.options.viewportScale = 1
           }
         ]
       }
+    },
+    {
+      "type": "lab.html.Form",
+      "content": "\u003Cbutton id=\"Continue\"\u003EContinue\u003C\u002Fbutton\u003E\n",
+      "scrollTop": true,
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Download data to firebase */
+this.options.events['click button#Continue'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
+  
+  firebase.database().ref(rng.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
+
+/* Continue to next screen */
+this.end()
+}
+
+}
+      },
+      "title": "Form"
     },
     {
       "type": "lab.html.Page",

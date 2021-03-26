@@ -2,6 +2,57 @@
 <html>
 <head>
   <meta charset="utf-8">
+<!-- ################################## -->
+<!--       Set up FireBase Stuff        -->
+<!-- ################################## -->
+
+<!-- Allow remote storage on Google Firebase -->
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script> <!-- #FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script> <!-- #FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-database.js"></script> <!-- #FIREBASE -->
+
+<!-- enter some javascript code-->
+<script type="text/javascript">
+// Firebase set up
+
+ // Your web app's Firebase configuration (given to us by firebase)
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrwKdMX5wq-b-K54reXWwUGecCw96AIJI",
+    authDomain: "jsexperiment-e8d79.firebaseapp.com",
+    databaseURL: "https://jsexperiment-e8d79-default-rtdb.firebaseio.com",
+    projectId: "jsexperiment-e8d79",
+    storageBucket: "jsexperiment-e8d79.appspot.com",
+    messagingSenderId: "710285854316",
+    appId: "1:710285854316:web:ec940f6a4a9ddb44b67a49"}; // #FIREBASE 
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig); // #FIREBASE
+  
+  // Get a reference to the database service
+  var database = firebase.database(); // #FIREBASE
+  
+  // login anonymous user
+  firebase.auth().signInAnonymously().catch(function(error) { // #FIREBASE
+  // Handle Errors here.
+  var errorCode = error.code; // #FIREBASE
+  var errorMessage = error.message; // #FIREBASE
+  // ...
+}); // #FIREBASE
+  
+  // check if user can sign on to firebase 
+  firebase.auth().onAuthStateChanged(function(user) { // #FIREBASE
+  if (user) { // #FIREBASE
+    // User is signed in.
+    var isAnonymous = user.isAnonymous; // #FIREBASE
+    var uid = user.uid; // #FIREBASE
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+  }
+  // ...
+});
+</script>
   <title>Experiment</title>
   <!-- viewport setup -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
