@@ -53,7 +53,7 @@ this.end()
 }
 }
       },
-      "title": "Screen",
+      "title": "Full Screen",
       "content": "\u003Cbutton id=\"fullscreen\"\u003EPress to enter full screen\u003C\u002Fbutton\u003E"
     },
     {
@@ -61,7 +61,7 @@ this.end()
       "items": [
         {
           "type": "text",
-          "title": "Click Continue"
+          "title": "Click \"Continue\" to proceed to the experiment"
         }
       ],
       "scrollTop": true,
@@ -82,7 +82,7 @@ document.body.style.color = 'grey'
 
 }
       },
-      "title": "Page"
+      "title": "Continue To Experiment"
     },
     {
       "type": "lab.html.Page",
@@ -129,6 +129,12 @@ document.body.style.color = 'grey'
           "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject. In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities. You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence. You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue. This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \n\nThe University of Manitoba may look at your research records to see that the research is being done in a safe and proper way.\nThis research has been approved by the Research Ethics Board 1 (REB1) at the University of Manitoba. If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca). \n\nPlease click on the \"I Consent\" button below to indicate that you wish to proceed with the experiment. \n\nPlease press the \"Esc\" key and exit your browser if you do not wish to proceed with the experiment. \n\nThank you. "
         },
         {
+          "required": false,
+          "type": "input",
+          "label": "If you would like to receive a general summary of the results from this study when it is completed, please provide your email address below:",
+          "name": "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:"
+        },
+        {
           "required": true,
           "type": "radio",
           "label": "Do you understand and consent to these terms? ",
@@ -143,6 +149,11 @@ document.body.style.color = 'grey'
             }
           ],
           "name": "Participant_Consent"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Thank you for your participation!"
         }
       ],
       "scrollTop": true,
@@ -161,54 +172,8 @@ document.body.style.color = 'grey'
       "items": [
         {
           "type": "text",
-          "content": "Click don't consent gets to Firebase"
-        },
-        {
-          "required": true,
-          "type": "html",
-          "content": "\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\r\n\r\n\u003Cbutton id=\"Submit\"\u003EContinue to Debriefing Form\u003C\u002Fbutton\u003E\r\n",
-          "name": ""
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "hidden",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-/* Get the documentElement (<html>) to display the page in fullscreen */
-var elem = document.documentElement;
-
-/* Download data to firebase */
-this.options.events['click button#Submit'] = function sendToFirebase() {
-    const rng = new lab.util.Random();
-  
-  firebase.database().ref(rng.uuid4()).set({
-    data: this.options.datastore.exportJson()
-    });
-
-/* Continue to next screen */
-this.end()
-}
-
-}
-      },
-      "title": "Page",
-      "skip": "${this.state['Participant_Consent'] == '1'}",
-      "tardy": true
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "",
-          "content": "click esc to exit "
+          "title": "Debriefing ",
+          "content": "Thank you for participating in this study.  \n\nIn this study we were interested in where on the target object you clicked when it moved to the left or right and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below, or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n\nThank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n\n"
         }
       ],
       "scrollTop": true,
@@ -257,10 +222,12 @@ this.end()
           "label": "How are you controlling the cursor on your device? ",
           "options": [
             {
-              "label": "Finger on a track pad "
+              "label": "Finger on a track pad ",
+              "coding": "1"
             },
             {
-              "label": "Mouse "
+              "label": "Mouse ",
+              "coding": "2"
             }
           ],
           "name": "how-are-you-controlling-the-cursor-on-your-device"
@@ -277,10 +244,12 @@ this.end()
           "label": "Vision",
           "options": [
             {
-              "label": "Normal"
+              "label": "Normal",
+              "coding": "1"
             },
             {
-              "label": "Corrected-to-Normal (glasses, contacts, eye surgery, etc.)"
+              "label": "Corrected-to-Normal (glasses, contacts, eye surgery, etc.)",
+              "coding": "2"
             }
           ],
           "name": "vision"
@@ -291,13 +260,16 @@ this.end()
           "label": "Sex assigned at birth",
           "options": [
             {
-              "label": "Male"
+              "label": "Male",
+              "coding": "1"
             },
             {
-              "label": "Female"
+              "label": "Female",
+              "coding": "2"
             },
             {
-              "label": "Prefer not to say"
+              "label": "Prefer not to say",
+              "coding": "3"
             }
           ],
           "name": "sex-assigned-at-birth"
@@ -308,10 +280,12 @@ this.end()
           "label": "Which hand do you use to throw a ball?",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-throw-a-ball"
@@ -322,10 +296,12 @@ this.end()
           "label": "Which hand do you use to brush your teeth? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-brush-your-teeth"
@@ -336,10 +312,12 @@ this.end()
           "label": "Which hand do you use to eat soup with a spoon? ",
           "options": [
             {
-              "label": "Left "
+              "label": "Left ",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-eat-soup-with-a-spoon"
@@ -350,10 +328,12 @@ this.end()
           "label": "Which hand do you use to comb your hair? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-comb-your-hair"
@@ -364,10 +344,12 @@ this.end()
           "label": "Which hand do you use to cut bread with a knife? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-cut-bread-with-a-knife"
@@ -378,10 +360,12 @@ this.end()
           "label": "Which hand do you use to swing a tennis\u002Fbadminton racquet or bat? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-swing-a-tennisbadminton-racquet-or-bat"
@@ -392,10 +376,12 @@ this.end()
           "label": "Which hand do you use to hammer a nail? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-hammer-a-nail"
@@ -406,10 +392,12 @@ this.end()
           "label": "Which hand do you use to point to something accurately? ",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right "
+              "label": "Right ",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-point-to-something-accurately"
@@ -420,10 +408,12 @@ this.end()
           "label": "Which hand do you use to write your name?  ",
           "options": [
             {
-              "label": "Left "
+              "label": "Left ",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-write-your-name"
@@ -434,13 +424,37 @@ this.end()
           "label": "Which hand do you use to control the cursor on the computer?",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
-              "label": "Right"
+              "label": "Right",
+              "coding": "2"
             }
           ],
           "name": "which-hand-do-you-use-to-control-the-cursor-on-the-computer"
+        },
+        {
+          "required": true,
+          "type": "radio",
+          "label": "Do you play any hand-eye coordination sports? ",
+          "options": [
+            {
+              "label": "Yes",
+              "coding": "1"
+            },
+            {
+              "label": "No",
+              "coding": "2"
+            }
+          ],
+          "name": "do-you-play-any-hand-eye-coordination-sports"
+        },
+        {
+          "required": true,
+          "type": "input",
+          "label": "If yes, which sports do you play? ",
+          "name": "if-yes-which-sports-do-you-play"
         }
       ],
       "scrollTop": true,
@@ -453,6 +467,221 @@ this.end()
       "parameters": {},
       "messageHandlers": {},
       "title": "Demographics Form"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Part 1: First, a quck task to get your screen set-up for the experiment ",
+          "content": "Click the center of each circle with your cursor. \n\nTIP: You may need to be very precise with your clicking. "
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Click 'Continue' when ready to proceed "
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewportScale = 1
+this.options.devicePixelScaling = false
+}
+      },
+      "title": "Calibration Task Instructions"
+    },
+    {
+      "type": "lab.flow.Loop",
+      "templateParameters": [
+        {
+          "Horizontal_Pos": "0",
+          "Vertical_Pos": "0",
+          "": "Center"
+        },
+        {
+          "Horizontal_Pos": "-300",
+          "Vertical_Pos": "0",
+          "": "Left"
+        },
+        {
+          "Horizontal_Pos": "0",
+          "Vertical_Pos": "0",
+          "": "Center"
+        },
+        {
+          "Horizontal_Pos": "300",
+          "Vertical_Pos": "0",
+          "": "Right"
+        },
+        {
+          "Horizontal_Pos": "0",
+          "Vertical_Pos": "0",
+          "": "Center"
+        }
+      ],
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Screen Setup ",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ],
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {
+          "": ""
+        },
+        "parameters": {},
+        "messageHandlers": {},
+        "title": "Sequence",
+        "plugins": [
+          {
+            "type": "mousetrap",
+            "mode": "mousetrap",
+            "path": "global.MousetrapPlugin"
+          }
+        ],
+        "content": [
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "circle",
+                "left": "${parameters.Horizontal_Pos}",
+                "top": "${parameters.Vertical_Pos}",
+                "angle": 0,
+                "width": 18,
+                "height": 18,
+                "stroke": "#000000",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Horizontal_Pos}",
+                "top": "${parameters.Vertical_Pos}",
+                "angle": 0,
+                "width": 2.46,
+                "height": 2.46,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black"
+              },
+              {
+                "type": "aoi",
+                "left": "${parameters.Horizontal_Pos}",
+                "top": "${Vertical_Pos}",
+                "angle": 0,
+                "width": 5.84,
+                "height": 5.84,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Center"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {},
+            "responses": {
+              "click @Center": "Center",
+              "click @Low": "Low",
+              "click @High": "High",
+              "click @Right": "Right",
+              "click @Left": "Left",
+              "click @Top_Left": "Top_Left",
+              "click @Top_Right": "Top_Right",
+              "click @Bottom_Left": "Bottom_Left",
+              "click @Bottom_Right": "Bottom_Right"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+
+
+}
+            },
+            "title": "Calibration",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "image",
+                "left": "0",
+                "top": 0,
+                "angle": 0,
+                "width": "801",
+                "height": "599.76",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[\"screen.png\"] }"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "screen.png": "embedded\u002F95dc598cf4d3a492b97f9e92279fe00780676be50bcfabb2c40360632a76cb1f.png"
+            },
+            "responses": {
+              "": ""
+            },
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Mask ",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ],
+            "timeout": "200"
+          }
+        ]
+      }
     },
     {
       "type": "lab.html.Page",
@@ -549,8 +778,21 @@ this.end()
         "": ""
       },
       "parameters": {},
-      "messageHandlers": {},
-      "title": "Practice Trials Instructions "
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1 
+}
+      },
+      "title": "Practice Trials Instructions ",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ]
     },
     {
       "type": "lab.flow.Loop",
@@ -566,7 +808,7 @@ this.end()
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "4"
+        "n": "2"
       },
       "files": {},
       "responses": {
@@ -583,6 +825,13 @@ this.options.viewportScale = 1
 }
       },
       "title": "Practice Trials",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ],
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -601,6 +850,13 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
+        "plugins": [
+          {
+            "type": "mousetrap",
+            "mode": "mousetrap",
+            "path": "global.MousetrapPlugin"
+          }
+        ],
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -656,8 +912,21 @@ this.options.viewportScale = 1
               "click @Start": "Start"
             },
             "parameters": {},
-            "messageHandlers": {},
-            "title": "Start Button"
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1 
+}
+            },
+            "title": "Start Button",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -707,7 +976,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Cue",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -766,7 +1042,14 @@ this.options.viewportScale = 1
 document.body.style.backgroundColor = 'black'
 }
             },
-            "title": "Block"
+            "title": "Block",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -812,7 +1095,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Displaced Block",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           }
         ]
       }
@@ -834,8 +1124,21 @@ this.options.viewportScale = 1
         "": ""
       },
       "parameters": {},
-      "messageHandlers": {},
-      "title": "Experiment Start"
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1 
+}
+      },
+      "title": "Experiment Start",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ]
     },
     {
       "type": "lab.flow.Loop",
@@ -847,23 +1150,11 @@ this.options.viewportScale = 1
         {
           "Pos": "300",
           "Cue": "50-50Cue.png"
-        },
-        {
-          "Pos": "-200",
-          "Cue": "50-50Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "50-50Cue.png"
-        },
-        {
-          "Pos": "300",
-          "Cue": "50-50Cue.png"
         }
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": ""
+        "n": "5"
       },
       "files": {},
       "responses": {
@@ -880,6 +1171,13 @@ this.options.viewportScale = 1
 }
       },
       "title": "Unbiased Loop",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ],
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -898,7 +1196,13 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
-        "plugins": [],
+        "plugins": [
+          {
+            "type": "mousetrap",
+            "mode": "mousetrap",
+            "path": "global.MousetrapPlugin"
+          }
+        ],
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -954,8 +1258,21 @@ this.options.viewportScale = 1
               "click @Start": "Start"
             },
             "parameters": {},
-            "messageHandlers": {},
-            "title": "Start Button"
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1 
+}
+            },
+            "title": "Start Button",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1005,7 +1322,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Cue",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1064,7 +1388,14 @@ this.options.viewportScale = 1
 document.body.style.backgroundColor = 'black'
 }
             },
-            "title": "Block"
+            "title": "Block",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1110,7 +1441,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Displaced Block",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           }
         ]
       }
@@ -1137,19 +1475,11 @@ this.options.viewportScale = 1
         {
           "Pos": "300",
           "Cue": "Right100Cue.png"
-        },
-        {
-          "Pos": "-200",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "200",
-          "Cue": "Right100Cue.png"
         }
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": ""
+        "n": "6"
       },
       "files": {},
       "responses": {
@@ -1166,6 +1496,13 @@ this.options.viewportScale = 1
 }
       },
       "title": "Biased Loop",
+      "plugins": [
+        {
+          "type": "mousetrap",
+          "mode": "mousetrap",
+          "path": "global.MousetrapPlugin"
+        }
+      ],
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -1184,6 +1521,13 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
+        "plugins": [
+          {
+            "type": "mousetrap",
+            "mode": "mousetrap",
+            "path": "global.MousetrapPlugin"
+          }
+        ],
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -1239,8 +1583,21 @@ this.options.viewportScale = 1
               "click @Start": "Start"
             },
             "parameters": {},
-            "messageHandlers": {},
-            "title": "Start Button"
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1 
+}
+            },
+            "title": "Start Button",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1290,7 +1647,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Cue",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1337,7 +1701,14 @@ this.options.viewportScale = 1
 document.body.style.backgroundColor = 'black'
 }
             },
-            "title": "Block"
+            "title": "Block",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           },
           {
             "type": "lab.canvas.Screen",
@@ -1383,7 +1754,14 @@ this.options.viewportScale = 1
 }
             },
             "title": "Displaced Block",
-            "timeout": "1000"
+            "timeout": "1000",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
           }
         ]
       }
