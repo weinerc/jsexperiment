@@ -173,7 +173,7 @@ document.body.style.color = 'grey'
         {
           "type": "text",
           "title": "Debriefing ",
-          "content": "Thank you for participating in this study.  \n\nIn this study we were interested in where on the target object you clicked when it moved to the left or right and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below, or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n\nThank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n\n"
+          "content": "In this study we were interested in where on the target object you clicked when it moved to the left or right of the screen, and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below, or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n\nThank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n\n"
         }
       ],
       "scrollTop": true,
@@ -191,7 +191,7 @@ document.body.style.color = 'grey'
     },
     {
       "type": "lab.html.Form",
-      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003EClicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once the new window opens, please minimize it and continue the experiment.  You may return to the new window following completion of the experiment.\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    Some browsers use pop-up blockers which may prevent the new window from opening.  If for some reason the new window does not open, and you do not receive credit for your participation in this study, please email langrirw@myumanitoba.ca AFTER COMPLETING THE EXPERIMENT.\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fwebstudy_credit.aspx?experiment_id=1317&credit_token=ea11add557884894bfa2af16c2a640c8&survey_code=${this.state.url.id}'\n,'','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n",
+      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003EClicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once the new window opens, please minimize it and continue the experiment.  You may return to the new window following completion of the experiment.\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    Some browsers use pop-up blockers which may prevent the new window from opening.  If for some reason the new window does not open, and you do not receive credit for your participation in this study, please email weinerc@myumanitoba.ca AFTER COMPLETING THE EXPERIMENT.\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fwebstudy_credit.aspx?experiment_id=1317&credit_token=ea11add557884894bfa2af16c2a640c8&survey_code=${this.state.url.id}'\n,'','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n",
       "scrollTop": true,
       "files": {},
       "responses": {
@@ -437,23 +437,23 @@ document.body.style.color = 'grey'
         {
           "required": true,
           "type": "radio",
-          "label": "Do you play any hand-eye coordination sports? ",
           "options": [
             {
               "label": "Yes",
               "coding": "1"
             },
             {
-              "label": "No",
+              "label": "No ",
               "coding": "2"
             }
           ],
-          "name": "do-you-play-any-hand-eye-coordination-sports"
+          "label": "Do you play any eye-hand coordination sports?",
+          "name": "do-you-play-any-eye-hand-coordination-sports"
         },
         {
           "required": true,
           "type": "input",
-          "label": "If yes, which sports do you play? ",
+          "label": "If yes, which sports do you play?",
           "name": "if-yes-which-sports-do-you-play"
         }
       ],
@@ -514,18 +514,13 @@ this.options.devicePixelScaling = false
         },
         {
           "Horizontal_Pos": "0",
-          "Vertical_Pos": "0",
-          "": "Center"
-        },
-        {
-          "Horizontal_Pos": "300",
-          "Vertical_Pos": "0",
-          "": "Right"
+          "Vertical_Pos": "150",
+          "": "Up"
         },
         {
           "Horizontal_Pos": "0",
-          "Vertical_Pos": "0",
-          "": "Center"
+          "Vertical_Pos": "-150",
+          "": "Down"
         }
       ],
       "sample": {
@@ -597,7 +592,7 @@ this.options.viewportScale = 1
               {
                 "type": "aoi",
                 "left": "${parameters.Horizontal_Pos}",
-                "top": "${Vertical_Pos}",
+                "top": "${parameters.Vertical_Pos}",
                 "angle": 0,
                 "width": 5.84,
                 "height": 5.84,
@@ -613,15 +608,7 @@ this.options.viewportScale = 1
             ],
             "files": {},
             "responses": {
-              "click @Center": "Center",
-              "click @Low": "Low",
-              "click @High": "High",
-              "click @Right": "Right",
-              "click @Left": "Left",
-              "click @Top_Left": "Top_Left",
-              "click @Top_Right": "Top_Right",
-              "click @Bottom_Left": "Bottom_Left",
-              "click @Bottom_Right": "Bottom_Right"
+              "click @Center": "Center"
             },
             "parameters": {},
             "messageHandlers": {
@@ -808,7 +795,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "2"
+        "n": "4"
       },
       "files": {},
       "responses": {
@@ -892,11 +879,11 @@ this.options.viewportScale = 1
               },
               {
                 "type": "aoi",
-                "left": 0.55,
-                "top": 261.44,
+                "left": 0,
+                "top": 260.98,
                 "angle": 0,
-                "width": 72.64,
-                "height": 38.98,
+                "width": 75.5,
+                "height": 38,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -936,8 +923,8 @@ this.options.viewportScale = 1
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 151,
-                "height": 76,
+                "width": "151",
+                "height": "76",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#aaaaaa"
@@ -989,17 +976,6 @@ this.options.viewportScale = 1
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "rect",
-                "left": "0",
-                "top": 0,
-                "angle": 0,
-                "width": "151",
-                "height": "76",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#aaaaaa"
-              },
-              {
                 "type": "aoi",
                 "left": 0,
                 "top": 0,
@@ -1016,12 +992,35 @@ this.options.viewportScale = 1
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
-                "width": 149.83,
+                "width": "149.83",
                 "height": 74.8,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": ""
+              },
+              {
+                "type": "rect",
+                "left": "0",
+                "top": 0,
+                "angle": 0,
+                "width": "151",
+                "height": "76",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "#aaaaaa"
+              },
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 151,
+                "height": 76,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Block"
               }
             ],
             "viewport": [
@@ -1057,10 +1056,10 @@ document.body.style.backgroundColor = 'black'
               {
                 "type": "rect",
                 "left": "${parameters.Pos}",
-                "top": "0",
+                "top": 0,
                 "angle": 0,
-                "width": "151",
-                "height": "76",
+                "width": 151,
+                "height": 76,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#aaaaaa"
@@ -1070,8 +1069,8 @@ document.body.style.backgroundColor = 'black'
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
-                "width": 147.81,
-                "height": 71.86,
+                "width": 151,
+                "height": "76",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1241,8 +1240,8 @@ this.options.viewportScale = 1
                 "left": 0,
                 "top": 261.88,
                 "angle": 0,
-                "width": 74.6,
-                "height": 36.18,
+                "width": 75.5,
+                "height": 38,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1362,12 +1361,12 @@ this.options.viewportScale = 1
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
-                "width": 149.83,
-                "height": 74.8,
+                "width": 151,
+                "height": 76,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
-                "label": ""
+                "label": "Block"
               }
             ],
             "viewport": [
@@ -1416,8 +1415,8 @@ document.body.style.backgroundColor = 'black'
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
-                "width": 147.81,
-                "height": 71.86,
+                "width": "151",
+                "height": "76",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1479,7 +1478,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "6"
+        "n": "1"
       },
       "files": {},
       "responses": {
@@ -1563,11 +1562,11 @@ this.options.viewportScale = 1
               },
               {
                 "type": "aoi",
-                "left": 0.05,
-                "top": 261.09,
+                "left": 0,
+                "top": 262.09,
                 "angle": 0,
-                "width": 75.58,
-                "height": 35.24,
+                "width": "75.5",
+                "height": "38",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1603,6 +1602,17 @@ this.options.viewportScale = 1
             "type": "lab.canvas.Screen",
             "content": [
               {
+                "type": "rect",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 151,
+                "height": 76,
+                "stroke": "#dddddd",
+                "strokeWidth": 0,
+                "fill": "#aaaaaa"
+              },
+              {
                 "type": "image",
                 "left": 0,
                 "top": 175,
@@ -1613,17 +1623,6 @@ this.options.viewportScale = 1
                 "strokeWidth": 0,
                 "fill": "black",
                 "src": "${ this.files[this.parameters.Cue] }"
-              },
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 151,
-                "height": 76,
-                "stroke": "#dddddd",
-                "strokeWidth": 0,
-                "fill": "#aaaaaa"
               }
             ],
             "viewport": [
@@ -1675,8 +1674,8 @@ this.options.viewportScale = 1
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 150.08,
-                "height": 73.02,
+                "width": 151,
+                "height": 76,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1714,23 +1713,35 @@ document.body.style.backgroundColor = 'black'
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "rect",
-                "left": "${parameters.Pos}",
-                "top": 0,
-                "angle": 0,
-                "width": "151",
-                "height": "76",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#aaaaaa"
-              },
-              {
                 "type": "aoi",
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
                 "width": 147.89,
                 "height": 73.33,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Block_D"
+              },
+              {
+                "type": "rect",
+                "left": "${parameters.Pos}",
+                "top": 0,
+                "angle": 0,
+                "width": 151,
+                "height": 76,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "#aaaaaa"
+              },
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 151,
+                "height": 76,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
