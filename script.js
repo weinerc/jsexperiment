@@ -24,39 +24,6 @@ const study = lab.util.fromObject({
   "responses": {},
   "content": [
     {
-      "type": "lab.html.Screen",
-      "files": {},
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-/* Get the documentElement (<html>) to display the page in fullscreen */
-var elem = document.documentElement;
-
-/* View in fullscreen */
-this.options.events['click button#fullscreen'] = function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-
-/* Continue to next screen */
-this.end()
-}
-}
-      },
-      "title": "Full Screen",
-      "content": "\u003Cbutton id=\"fullscreen\"\u003EPress to enter full screen\u003C\u002Fbutton\u003E"
-    },
-    {
       "type": "lab.html.Page",
       "items": [
         {
@@ -435,7 +402,7 @@ document.body.style.color = 'grey'
           "name": "which-hand-do-you-use-to-control-the-cursor-on-the-computer"
         },
         {
-          "required": true,
+          "required": false,
           "type": "radio",
           "options": [
             {
@@ -451,7 +418,7 @@ document.body.style.color = 'grey'
           "name": "do-you-play-any-eye-hand-coordination-sports"
         },
         {
-          "required": true,
+          "required": false,
           "type": "input",
           "label": "If yes, which sports do you play?",
           "name": "if-yes-which-sports-do-you-play"
@@ -467,6 +434,39 @@ document.body.style.color = 'grey'
       "parameters": {},
       "messageHandlers": {},
       "title": "Demographics Form"
+    },
+    {
+      "type": "lab.html.Screen",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+this.options.events['click button#fullscreen'] = function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+
+/* Continue to next screen */
+this.end()
+}
+}
+      },
+      "title": "Full Screen",
+      "content": "\u003Cbutton id=\"fullscreen\"\u003EPress to enter full screen\u003C\u002Fbutton\u003E"
     },
     {
       "type": "lab.html.Page",
@@ -1238,7 +1238,7 @@ this.options.viewportScale = 1
               {
                 "type": "aoi",
                 "left": 0,
-                "top": 261.88,
+                "top": 260.88,
                 "angle": 0,
                 "width": 75.5,
                 "height": 38,
@@ -1455,6 +1455,34 @@ this.options.viewportScale = 1
     {
       "type": "lab.flow.Loop",
       "templateParameters": [
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "-150",
+          "Cue": "Left100Cue.png"
+        },
         {
           "Pos": "-300",
           "Cue": "Left100Cue.png"
