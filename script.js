@@ -795,7 +795,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "4"
+        "n": "3"
       },
       "files": {},
       "responses": {
@@ -1038,7 +1038,7 @@ this.options.viewportScale = 1
 this.options.viewport = [800, 600]
 this.options.viewportScale = 1 
 
-document.body.style.backgroundColor = 'black'
+
 }
             },
             "title": "Block",
@@ -1358,7 +1358,7 @@ this.options.viewportScale = 1
               },
               {
                 "type": "aoi",
-                "left": "${parameters.Pos}",
+                "left": "0",
                 "top": 0,
                 "angle": 0,
                 "width": 151,
@@ -1384,7 +1384,7 @@ this.options.viewportScale = 1
 this.options.viewport = [800, 600]
 this.options.viewportScale = 1 
 
-document.body.style.backgroundColor = 'black'
+
 }
             },
             "title": "Block",
@@ -1415,8 +1415,8 @@ document.body.style.backgroundColor = 'black'
                 "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
-                "width": "151",
-                "height": "76",
+                "width": 151,
+                "height": 76,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1765,7 +1765,7 @@ document.body.style.backgroundColor = 'black'
               },
               {
                 "type": "aoi",
-                "left": 0,
+                "left": "${parameters.Pos}",
                 "top": 0,
                 "angle": 0,
                 "width": 151,
