@@ -69,7 +69,7 @@ document.body.style.color = 'grey'
           "required": true,
           "type": "text",
           "title": "Description",
-          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. A grey rectangle will appear in the center of the screen and a picture will appear below it briefly. Once the image disappears, and only the grey rectangle remains, you will click on the grey rectangle. The rectangle will then jump to either to the left or to the right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
+          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. A picture will briefly appear in the center of the screen. Then, a grey rectangle will appear in the center of the screen; you will click on the grey rectangle. The rectangle will then jump to either to the left or to the right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
         },
         {
           "required": true,
@@ -686,12 +686,6 @@ this.options.viewportScale = 1
         },
         {
           "required": true,
-          "type": "image",
-          "src": "${ this.files[\"ins pic.png\"] }",
-          "name": ""
-        },
-        {
-          "required": true,
           "type": "text",
           "content": "At the beginning of each trial, you will see a black screen with a grey \"start\" button in the bottom-center. Please click on the \"start\" button to begin the trial.",
           "title": "Start Button"
@@ -705,20 +699,14 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "text",
-          "content": "A grey rectangle will appear in the center of the screen, and a picture will appear below it briefly. ",
-          "title": "Trial Beginning "
+          "content": "A grey rectangle will appear in the center of the screen. You will click on the grey rectangle. \n\nThe grey rectangle will then move to the left or right of where it was before. When it reappears in its new location, click on it quickly but naturally before it disappears. \n",
+          "title": "Trial Beginning and Clicking"
         },
         {
           "required": true,
           "type": "image",
           "src": "${ this.files[\"cueimgsampl.png\"] }",
           "name": ""
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "Once the picture disappears, you will click on the grey rectangle. \n\nThe grey rectangle will then move to the left or right of where it was before. When it reappears in its new location, click on it quickly but naturally before it disappears. \n",
-          "title": "Clicking"
         },
         {
           "required": true,
@@ -739,7 +727,7 @@ this.options.viewportScale = 1
         "Left100Cue.png": "embedded\u002F0d36b357cd61ca98fda76d7458ddfe97bd2738bc1c0fabc2cb69c04fb975d9f3.png",
         "Right100Cue.png": "embedded\u002Fd27392f136ca91eae8c917d1628ddf8575911a1815392e9d95b53541b00cc675.png",
         "ins pic.png": "embedded\u002F0dd6ebc0800ec19a911aad69cbbc4f9ad1d111935f6841353495b35e96e8aa3e.png",
-        "cueimgsampl.png": "embedded\u002F496423ea7a97d86da55b1f024df502186513888242d2824dca86f91ea9f29c7c.png"
+        "cueimgsampl.png": "embedded\u002F34268e3e58252b1b1aac91ee6c36474c95ea3c7a625212d93a0efa635714fbd9.png"
       },
       "responses": {
         "": ""
@@ -919,27 +907,17 @@ this.options.viewportScale = 1
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "151",
-                "height": "76",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#aaaaaa"
-              },
-              {
                 "type": "image",
                 "left": 0,
-                "top": 175,
+                "top": "0",
                 "angle": 0,
                 "width": 78,
                 "height": 78.13000000000001,
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[\"50-50Cue.png\"] }"
+                "src": "${ this.files[\"50-50Cue.png\"] }",
+                "autoScale": undefined
               }
             ],
             "viewport": [
@@ -1153,7 +1131,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "5"
+        "n": "3"
       },
       "files": {},
       "responses": {
@@ -1277,20 +1255,9 @@ this.options.viewportScale = 1
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 151,
-                "height": 76,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#aaaaaa"
-              },
-              {
                 "type": "image",
                 "left": 0,
-                "top": 175,
+                "top": "0",
                 "angle": 0,
                 "width": 78,
                 "height": 78.13000000000001,
@@ -1506,7 +1473,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "1"
+        "n": "3"
       },
       "files": {},
       "responses": {
@@ -1630,27 +1597,17 @@ this.options.viewportScale = 1
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 151,
-                "height": 76,
-                "stroke": "#dddddd",
-                "strokeWidth": 0,
-                "fill": "#aaaaaa"
-              },
-              {
                 "type": "image",
                 "left": 0,
-                "top": 175,
+                "top": "0",
                 "angle": 0,
-                "width": "76",
-                "height": "76",
+                "width": 78.26,
+                "height": 78.13000000000001,
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.Cue] }"
+                "src": "${ this.files[this.parameters.Cue] }",
+                "autoScale": undefined
               }
             ],
             "viewport": [
