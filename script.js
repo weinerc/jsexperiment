@@ -57,7 +57,13 @@ document.body.style.color = 'grey'
         {
           "type": "text",
           "title": "Consent Form ",
-          "content": "Cristina Weiner (weinerc@myumanitoba.ca)\nJob Title: M.A. Student\nDepartment of Psychology\nUniversity of Manitoba\nWinnipeg, Manitoba, R3T 2N2\n\nDr. Jonathan Marotta, Ph.D. (Jonathan.Marotta@umanitoba.ca)\nJob Title: Professor\nDepartment of Psychology\nUniversity of Manitoba\nWinnipeg, Manitoba, R3T 2N2\n\nProject Title: Predictive Eye Movements When Clicking On Targets\nSupervisor: Dr. Jonathan Marotta, Ph.D.\nStudent Researchers: Cristina Weiner\n"
+          "content": ""
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cb\u003EProject Title: \u003C\u002Fb\u003E Predictive Eye Movements When Clicking On Targets\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cb\u003EStudent Researcher\u003C\u002Fb\u003E\u003Cbr\u003E\r\nCristina Weiner (weinerc@myumanitoba.ca)\u003Cbr\u003E\r\n\u003Cb\u003EJob Title:\u003C\u002Fb\u003E M.A. Student\u003Cbr\u003E\r\nDepartment of Psychology\u003Cbr\u003E\r\nUniversity of Manitoba\u003Cbr\u003E\r\nWinnipeg, Manitoba, R3T 2N2\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\u003Cb\u003ESupervisor\u003C\u002Fb\u003E\u003Cbr\u003E\r\nDr. Jonathan Marotta, Ph.D. (Jonathan.Marotta@umanitoba.ca)\u003Cbr\u003E\r\n\u003Cb\u003EJob Title:\u003C\u002Fb\u003E Professor\u003Cbr\u003E\r\nDepartment of Psychology\u003Cbr\u003E\r\nUniversity of Manitoba\u003Cbr\u003E\r\nWinnipeg, Manitoba, R3T 2N2\u003Cbr\u003E\u003Cbr\u003E\r\n\r\n\r\n\r\n\r\n",
+          "name": ""
         },
         {
           "required": true,
@@ -69,7 +75,27 @@ document.body.style.color = 'grey'
           "required": true,
           "type": "text",
           "title": "Description",
-          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. A picture will briefly appear in the center of the screen. Then, a grey rectangle will appear in the center of the screen; you will click on the grey rectangle. The rectangle will then jump to either to the left or to the right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
+          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. A picture will briefly appear in the center of the screen. Then, a grey rectangle will appear in the center, and you will click on it. The rectangle will then jump to either to the left or right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue ",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Consent Form"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Consent Form ",
+          "content": ""
         },
         {
           "required": true,
@@ -94,6 +120,26 @@ document.body.style.color = 'grey'
           "type": "text",
           "title": "Voluntary Consent",
           "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject. In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities. You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence. You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue. This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \n\nThe University of Manitoba may look at your research records to see that the research is being done in a safe and proper way.\nThis research has been approved by the Research Ethics Board 1 (REB1) at the University of Manitoba. If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca). \n\nPlease click on the \"I Consent\" button below to indicate that you wish to proceed with the experiment. \n\nPlease press the \"Esc\" key and exit your browser if you do not wish to proceed with the experiment. \n\nThank you. "
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue ",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Consent Form"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Consent Form ",
+          "content": ""
         },
         {
           "required": false,
@@ -473,7 +519,7 @@ this.end()
       "items": [
         {
           "type": "text",
-          "title": "Part 1: First, a quck task to get your screen set-up for the experiment ",
+          "title": "Part 1: First, a quick task to get your screen set-up for the experiment ",
           "content": "Click the center of each circle with your cursor. \n\nTIP: You may need to be very precise with your clicking. "
         },
         {
@@ -686,6 +732,48 @@ this.options.viewportScale = 1
         },
         {
           "required": true,
+          "type": "image",
+          "src": "${ this.files[\"sitting.jpg\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "image",
+          "src": "${ this.files[\"ruler.jpg\"] }",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "ruler.jpg": "embedded\u002F53c4517f83af51cfa4cd59f115e054032e0a5489ab84e8e02aa0fe0997ebb07b.jpg",
+        "sitting.jpg": "embedded\u002Fb43ef0f3cce2c1d411af7e48d7ffea9cd2ba6d2bd103fcaf95c5a7d34e3ece19.jpg",
+        "Block.png": "embedded\u002F8f65d0be06da3cba8e915127f7b2a80beb25b729780e2f442a4262337f64c383.png",
+        "start_button.png": "embedded\u002F30290609220bb49852425d67a21e2ef4e1760040b35e5731c53ca905701d3a0c.png",
+        "50-50Cue.png": "embedded\u002Fc4893cfd9f513e8fabac5d88fc993cd5310142a6e7e600a04344a3a7169cff55.png",
+        "Left100Cue.png": "embedded\u002F0d36b357cd61ca98fda76d7458ddfe97bd2738bc1c0fabc2cb69c04fb975d9f3.png",
+        "Right100Cue.png": "embedded\u002Fd27392f136ca91eae8c917d1628ddf8575911a1815392e9d95b53541b00cc675.png",
+        "ins pic.png": "embedded\u002F0dd6ebc0800ec19a911aad69cbbc4f9ad1d111935f6841353495b35e96e8aa3e.png",
+        "cueimgsampl.png": "embedded\u002F34268e3e58252b1b1aac91ee6c36474c95ea3c7a625212d93a0efa635714fbd9.png"
+      },
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Experiment Instructions"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "content": "\n\n\n\n\n\n",
+          "title": "Experiment Instructions"
+        },
+        {
+          "required": true,
           "type": "text",
           "content": "At the beginning of each trial, you will see a black screen with a grey \"start\" button in the bottom-center. Please click on the \"start\" button to begin the trial.",
           "title": "Start Button"
@@ -699,8 +787,19 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "text",
-          "content": "A grey rectangle will appear in the center of the screen. You will click on the grey rectangle. \n\nThe grey rectangle will then move to the left or right of where it was before. When it reappears in its new location, click on it quickly but naturally before it disappears. \n",
+          "content": "A picture will briefly appear in the center of the screen. ",
           "title": "Trial Beginning and Clicking"
+        },
+        {
+          "required": true,
+          "type": "image",
+          "src": "${ this.files[\"middles.png\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Then, a grey rectangle will appear in the center, and you will click on it. \n\nThe rectangle will then jump to either to the left or right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. \n"
         },
         {
           "required": true,
@@ -727,7 +826,8 @@ this.options.viewportScale = 1
         "Left100Cue.png": "embedded\u002F0d36b357cd61ca98fda76d7458ddfe97bd2738bc1c0fabc2cb69c04fb975d9f3.png",
         "Right100Cue.png": "embedded\u002Fd27392f136ca91eae8c917d1628ddf8575911a1815392e9d95b53541b00cc675.png",
         "ins pic.png": "embedded\u002F0dd6ebc0800ec19a911aad69cbbc4f9ad1d111935f6841353495b35e96e8aa3e.png",
-        "cueimgsampl.png": "embedded\u002F34268e3e58252b1b1aac91ee6c36474c95ea3c7a625212d93a0efa635714fbd9.png"
+        "cueimgsampl.png": "embedded\u002F34268e3e58252b1b1aac91ee6c36474c95ea3c7a625212d93a0efa635714fbd9.png",
+        "middles.png": "embedded\u002Fefc521c8ede4383ac5e7309f8457d52e21ec52b0314b57f8808c3dd289ca278e.png"
       },
       "responses": {
         "": ""
@@ -909,15 +1009,14 @@ this.options.viewportScale = 1
               {
                 "type": "image",
                 "left": 0,
-                "top": "0",
+                "top": 0,
                 "angle": 0,
                 "width": 78,
-                "height": 78.13000000000001,
+                "height": "78",
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[\"50-50Cue.png\"] }",
-                "autoScale": undefined
+                "src": "${ this.files[\"50-50Cue.png\"] }"
               }
             ],
             "viewport": [
@@ -1257,10 +1356,10 @@ this.options.viewportScale = 1
               {
                 "type": "image",
                 "left": 0,
-                "top": "0",
+                "top": 0,
                 "angle": 0,
                 "width": 78,
-                "height": 78.13000000000001,
+                "height": "78",
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
@@ -1599,15 +1698,14 @@ this.options.viewportScale = 1
               {
                 "type": "image",
                 "left": 0,
-                "top": "0",
+                "top": 0,
                 "angle": 0,
-                "width": 78.26,
-                "height": 78.13000000000001,
+                "width": "78",
+                "height": "78",
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.Cue] }",
-                "autoScale": undefined
+                "src": "${ this.files[this.parameters.Cue] }"
               }
             ],
             "viewport": [
@@ -1796,7 +1894,12 @@ this.end()
         {
           "type": "text",
           "title": "Debriefing Form",
-          "content": "Thank you for participating in this study.  \n\nIn this study we were interested in where on the target object you clicked when it moved to the left or right and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below. Thank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n"
+          "content": "Thank you for participating in this study.  \n\nIn this study we were interested in where on the target object you clicked when it moved to the left or right and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below. Thank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca"
         }
       ],
       "scrollTop": true,
