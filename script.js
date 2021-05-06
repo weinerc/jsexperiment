@@ -69,13 +69,13 @@ document.body.style.color = 'grey'
           "required": true,
           "type": "text",
           "title": "Purpose",
-          "content": "We are interested in where you are looking when moving to click on computer-generated target objects."
+          "content": "We are interested in where you are looking when moving a cursor to click on computer-generated target objects."
         },
         {
           "required": true,
           "type": "text",
           "title": "Description",
-          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. A picture will briefly appear in the center of the screen. Then, a grey rectangle will appear in the center, and you will click on it. The rectangle will then jump to either to the left or right. When the rectangle is in its new location, click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
+          "content": "This study will last approximately 30 minutes. During the experiment, you will click on a start button to begin each trial. An image will then briefly appear in the center of the screen. Then, a grey rectangle will appear in the center of the screen. You will click on the rectangle. The rectangle will then jump to either to the left or right. When the rectangle is in its new location, you will click on it quickly but naturally before it disappears. Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
         }
       ],
       "scrollTop": true,
@@ -114,12 +114,6 @@ document.body.style.color = 'grey'
           "type": "text",
           "title": "Confidentiality",
           "content": "Your information will be kept confidential. You will be referred to by a code number. After completing the experiment, all identifying information will be saved separately from your experimental data, and will only be used to assign you participation credit. Your files will only be accessible by the investigators. Results from this study will be disseminated through conference presentations and refereed publications. Participant confidentiality will not be jeopardized. \n"
-        },
-        {
-          "required": true,
-          "type": "text",
-          "title": "Voluntary Consent",
-          "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject. In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities. You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence. You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue. This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \n\nThe University of Manitoba may look at your research records to see that the research is being done in a safe and proper way.\nThis research has been approved by the Research Ethics Board 1 (REB1) at the University of Manitoba. If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca). \n\nPlease click on the \"I Consent\" button below to indicate that you wish to proceed with the experiment. \n\nPlease press the \"Esc\" key and exit your browser if you do not wish to proceed with the experiment. \n\nThank you. "
         }
       ],
       "scrollTop": true,
@@ -140,6 +134,12 @@ document.body.style.color = 'grey'
           "type": "text",
           "title": "Consent Form ",
           "content": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Voluntary Consent",
+          "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject. In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities. You are free to withdraw from the study at any time by pressing the 'Esc' key and exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence. You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue. This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \n\nThe University of Manitoba may look at your research records to see that the research is being done in a safe and proper way.\nThis research has been approved by the Research Ethics Board 1 (REB1) at the University of Manitoba. If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca). \n\nPlease click on the \"I Consent\" button below to indicate that you wish to proceed with the experiment. \n\nPlease press the \"Esc\" key and exit your browser if you do not wish to proceed with the experiment. \n\nThank you. "
         },
         {
           "required": false,
@@ -186,7 +186,7 @@ document.body.style.color = 'grey'
         {
           "type": "text",
           "title": "Debriefing ",
-          "content": "In this study we were interested in where on the target object you clicked when it moved to the left or right of the screen, and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below, or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n\nThank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n\n"
+          "content": "In this study we were interested in where on the target object you clicked when it moved to the left or right of the screen, and the trajectory of your mouse movements. Through the examination and analysis of these mouse movements, we also sought to infer where you were looking when you made those mouse movements. Despite the co-occurrence of both vision and visuomotor processes, vision and motor functioning are typically studied independently, so their critical interactions are poorly understood. What is currently lacking in this area is a clear understanding of where people are looking while clicking on targets of varying complexity. Specifically, this study sought to expand current understandings of visual and visuomotor interactions by recording mouse movements and inferring the location of gaze made to visually presented targets. If you have any questions later on, please feel free to contact me – my contact information is listed below, or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca. \n\nPlease press \"Esc\" to exit the experiment. \n\nCristina Weiner           \nDepartment of Psychology \nUniversity of Manitoba\nweinerc@myumanitoba.ca\n\nThank you again for participating.\n\nPlease press \"Esc\" to exit the experiment. \n\n\n"
         }
       ],
       "scrollTop": true,
@@ -279,10 +279,6 @@ document.body.style.color = 'grey'
             {
               "label": "Female",
               "coding": "2"
-            },
-            {
-              "label": "Prefer not to say",
-              "coding": "3"
             }
           ],
           "name": "sex-assigned-at-birth"
@@ -733,13 +729,7 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "image",
-          "src": "${ this.files[\"sitting.jpg\"] }",
-          "name": ""
-        },
-        {
-          "required": true,
-          "type": "image",
-          "src": "${ this.files[\"ruler.jpg\"] }",
+          "src": "${ this.files[\"ins pic.png\"] }",
           "name": ""
         }
       ],
@@ -1220,7 +1210,119 @@ this.options.viewportScale = 1
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
+          "Pos": "-150",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-150",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-150",
+          "Cue": "50-50Cue.png"
+        },
+        {
           "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
           "Cue": "50-50Cue.png"
         },
         {
@@ -1230,7 +1332,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "3"
+        "n": "1"
       },
       "files": {},
       "responses": {
@@ -1522,28 +1624,20 @@ this.options.viewportScale = 1
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "Pos": "-300",
+          "Pos": "-150",
           "Cue": "Left100Cue.png"
         },
         {
-          "Pos": "-300",
+          "Pos": "-150",
           "Cue": "Left100Cue.png"
         },
         {
-          "Pos": "-300",
+          "Pos": "-150",
           "Cue": "Left100Cue.png"
         },
         {
-          "Pos": "-300",
+          "Pos": "-150",
           "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "300",
-          "Cue": "Right100Cue.png"
-        },
-        {
-          "Pos": "150",
-          "Cue": "Right100Cue.png"
         },
         {
           "Pos": "-150",
@@ -1566,13 +1660,253 @@ this.options.viewportScale = 1
           "Cue": "Left100Cue.png"
         },
         {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
           "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "150",
           "Cue": "Right100Cue.png"
         }
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "3"
+        "n": "1"
       },
       "files": {},
       "responses": {
