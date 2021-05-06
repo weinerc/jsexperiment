@@ -869,11 +869,19 @@ this.options.viewportScale = 1
         {
           "Pos": "300",
           "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "50-50Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "50-50Cue.png"
         }
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "3"
+        "n": ""
       },
       "files": {},
       "responses": {
@@ -1332,7 +1340,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "1"
+        "n": ""
       },
       "files": {},
       "responses": {
@@ -1906,7 +1914,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "1"
+        "n": ""
       },
       "files": {},
       "responses": {
