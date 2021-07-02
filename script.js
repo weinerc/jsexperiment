@@ -1632,216 +1632,80 @@ this.options.viewportScale = 1
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "Pos": "-150",
-          "Cue": "Left100Cue.png"
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-150",
-          "Cue": "Left100Cue.png"
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-150",
-          "Cue": "Left100Cue.png"
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-150",
-          "Cue": "Left100Cue.png"
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-150",
-          "Cue": "Left100Cue.png"
+          "Pos": "150",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
-        },
-        {
-          "Pos": "-300",
-          "Cue": "Left100Cue.png"
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
         },
         {
           "Pos": "300",
@@ -1902,6 +1766,142 @@ this.options.viewportScale = 1
         {
           "Pos": "300",
           "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "300",
+          "Cue": "Right100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
+        },
+        {
+          "Pos": "-300",
+          "Cue": "Left100Cue.png"
         },
         {
           "Pos": "150",
